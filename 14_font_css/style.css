@@ -1,0 +1,26 @@
+
+
+@font-face{
+    font-family: 'Modak';
+    src: url("./fonts/Modak/Modak-Regular.ttf");
+}
+
+body{
+    color:white;
+    height: 300vh;
+    width: 100%;
+    font-size: 32px;
+    background-image: url('vikings.jpg');
+    background-repeat: no-repeat;
+    background-size: content;
+    background-position: top right;
+    background-attachment: fixed;
+}
+
+.font{
+    font-family: 'Modak', sans-serif;
+}
+
+.bold{
+    font-weight: bold;
+}
