@@ -1,0 +1,17 @@
+div{
+    /* background-color: Fuchsia; */
+    /* background-color: #fff; */
+    background-color: Fuchsia;
+    width:460px;
+    height:200px;
+    /* min-height, max-height */
+    margin: 200px;
+    /* padding: 100px; */
+    margin: 50px 300px; /* Vertical, Horizontal */
+    /* padding: 300px 10px; */
+    padding: 40px 50px 300px 400px; /*Haut Droite Bas Gauche */ 
+    padding-left: 30px;
+
+    /* Technique pour centrer un élément */
+    margin: 0 auto;
+}

@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    height: 600vh; /* Détermine la taille à laquelle on peut scroll, en résumé */
+}
+
+*, *:before *:after{
+    box-sizing: border-box;
+}
+
+p{
+    width: 250px;
+    background-color: #b4b4b4;
+    margin: 125px auto;
+    position: relative;
+    padding: 20px;
+}
+
+.promo{
+    display: block;
+    background-color: fuchsia;
+    width: 50px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 50px; /* Centrer l'élément sur le texte  en le mettant au même que la hauteur */
+    position: absolute;
+    top:15px;
+    left:-25px;
+}
+
+h1{
+    position: sticky; /* Reste positionné et reste à l'écran une fois le top ou le left dépassé */
+    top:140px;
+    left:200px;
+}

@@ -1,0 +1,25 @@
+.container{
+    width: 80%;
+    height: 350px;
+    margin: 0 auto;
+    background-color: #f4a5b3;
+
+    display:flex;
+    /* justify-content: flex-end; Tout à droite */
+    /* justify-content: center; Au milieu */
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.box{
+    width: 150px;
+    background-color: red;
+    height: 150px;
+    margin: 10px;
+}
+
+.boxSmall{
+    height: 50px;
+    
+}

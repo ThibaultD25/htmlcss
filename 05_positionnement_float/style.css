@@ -1,0 +1,39 @@
+p{
+    margin: 15px;
+    padding: 15px;
+    width: 400px;
+}
+
+img{
+    float:left;
+}
+
+.p0{
+    background-color: red;
+    float:right;
+}
+
+.container{
+    clear:both;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #e8f5;
+}
+
+.p1{
+    background-color: green;
+    width: 15%;
+    float: left;
+}
+
+.p2{
+    background-color: fuchsia;
+    width: 15%;
+    float: left;
+}
+
+.p3{
+    background-color: blue;
+    width: 15%;
+    float: left;
+}
