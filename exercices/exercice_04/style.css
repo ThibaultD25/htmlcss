@@ -1,0 +1,122 @@
+body {
+    background-color: #2a2a2a;
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid-container {
+    margin: auto;
+    width: 960px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.3fr 1.1fr 0.7fr repeat(3, 1fr);
+    gap: 10px;
+    grid-template-areas: "header header header" "banner banner banner" "text_zone_1 text_zone_2 text_zone_3" "content content content" "titles titles titles" "footer footer footer";
+}
+
+.btn {
+    text-align: center;
+    display: block;
+    width: 200px;
+    height: 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    background-color: #c8c404;
+    color: black;
+}
+
+.roundimg {
+    border-radius: 50%;
+    margin:5px;
+}
+
+.banner {
+    grid-area: banner;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    width: 960px;
+    justify-content: space-between;
+}
+
+.rightul {
+    display: flex;
+    width: 375px;
+}
+
+.rightul>li {
+    padding-left: 10px;
+}
+
+.text_zones {
+    display: flex;
+    flex-direction: row;
+}
+
+.margin_text {
+    margin: 15px;
+    width: 290px;
+    background-color: #fff;
+}
+
+.text_zone_1 {
+    grid-area: text_zone_1;
+}
+
+.text_zone_2 {
+    grid-area: text_zone_2;
+}
+
+.text_zone_3 {
+    grid-area: text_zone_3;
+}
+
+.text_zone {
+    padding: 25px;
+}
+
+.content {
+    grid-area: content;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+
+.padding_content {
+    padding: 30px;
+    ;
+}
+
+.titles {
+    grid-area: titles;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.link {
+    text-decoration: none;
+    color: #c2c216;
+}
+
+h4 {
+    padding-left: 35px;
+    padding-bottom: 6px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+div > ul{
+    width: 100%;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>16-Formulaire</title>
+</head>
+
+<body>
+    <!-- METHODE GET => Limitée par le nombre de données et elle est moins sécurisante -->
+    <!-- METHODE POST => Adaptée pour les formulaires de connexion et inscription ca rles données sont cachées -->
+    <form action="javascript: void(0)" method="post">
+        <div>
+            <label for="nom">
+                Nom
+            </label>
+            <!-- <input type="text" name="name" id="nom" value="Tadam"> -->
+            <input type="text" name="name" id="nom" placeholder="Veuillez insérer votre nom">
+        </div>
+        <div>
+            <label>Test:</label>
+            <input type="number" name="test" id="test">
+            <input type="color" name="test" id="test">
+            <input type="time" name="test" id="test">
+            <input type="date" name="test" id="test">
+            <input type="email" required name="test" id="test">
+            <input type="file" multiple name="test" id="test">
+            <input type="password" disabled name="test" id="test">
+        </div>
+        <div>
+            <label for="chien">Chien</label>
+            <input type="checkbox" checked name="chien" id="chien">
+
+            <label for="chat">Chat</label>
+            <input type="checkbox" name="chat" id="chat">
+        </div>
+        <div>
+            <h1>
+                Ton artiste favori
+            </h1>
+            <input type="radio" name="artiste" id="jauz">
+            <label for="jauz">Jauz</label>
+            <input type="radio" checked name="artiste" id="marauda">
+            <label for="marauda">Marauda</label>
+            <input type="radio" name="artiste" id="bieber">
+            <label for="bieber">Justin Bieber</label>
+        </div>
+        <div>
+            <label for="text">Mes remarques pour le cours de Sébastien :</label><br>
+            <textarea name="text" id="text" cols="30" rows="10">
+                Le meilleur formateur bien évidemment
+            </textarea>
+        </div>
+        <div>
+            <h1>Choisis ta couleur :</h1>
+            <select name="color" id="color">
+                <option value="default" selected disabled>Select one color</option>
+                <option value="red">Rouge</option>
+                <optgroup label="Bleu">
+                    <option value="Cyan">Cyan</option>
+                    <option value="Bluesky">Blue Sky</option>
+                </optgroup>
+            </select>
+        </div>
+        <button type="reset">RESET</button>
+        <button type="submit">SUBMIT MOI</button>
+    </form>
+
+</body>
+
+</html>
