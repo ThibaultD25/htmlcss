@@ -1,33 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 body {
     margin: 0 auto;
     height: 100vh;
     width: 100%;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
-    font-size: 20px; 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.grid-container {
-    background-image: url(img/billboard.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top left; 
-    
-    /* background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,1) 48%, rgba(255,255,255,0.028448879551820738) 54%); */
+ul {
+    list-style: none;
+}
+
+.container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 300px 1fr 1.7fr 1.7fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 445px 150px 250px 150px 350px 100px;
+    grid-template-areas: "bgimg" "video" "testimonials" "second-section" "rec-posts" "posts" "footer";
+}
+
+.bgimg {
+    height: 1170px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 43%, rgba(255, 255, 255, 0.008448879551820738) 50%), url('img/billboard.jpg') no-repeat;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 485px 385px;
     gap: 1px 1px;
-    grid-template-areas:    "nav nav nav" 
-                            "header header header" 
-                            "sec1-art1 sec1-art2 sect1-art3" 
-                            "video video video" 
-                            "testimonials testimonials testimonials" 
-                            "sec2-art1 sec2-art2 sec2-art3" 
-                            "rec-posts rec-posts rec-posts" 
-                            "posts posts posts" 
-                            "footer footer footer";
+    grid-template-areas: "nav" "header" "firstsection";
+    grid-area: bgimg;
+}
+
+.first-section {
+    grid-area: firstsection;
+}
+
+.first-section>ul {
+    display: flex;
+    justify-content: center;
+}
+
+.fs-ul>li {
+    width: 25%;
+}
+
+.fs-ul>li>h2 {
+    color: gray;
+}
+
+.logo{
+    margin-top: 25px;
+    display: block;
+    text-indent: -9999px;
+    background: url('img/logo_light.png') no-repeat;
+    width: 80px;
+    height: 26px;
 }
 
 nav {
@@ -36,64 +62,182 @@ nav {
     justify-content: space-around;
 }
 
-nav > img{
+nav>img {
+    padding: 30px;
     height: 26px;
-    width: 80px;
 }
 
-nav > ul{
+nav ul a, footer ul a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    position: relative;
+}
+
+nav ul a:after, footer ul a:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: 0 -5px;
+    left: 0;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+nav ul a:hover:after, footer ul a:hover:after {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+}
+
+nav>ul, footer>ul {
     display: flex;
-    list-style: none;
+}
+
+nav>ul>li, footer>ul>li {
+    color: white;
+    padding: 25px;
 }
 
 header {
     grid-area: header;
+    color: white;
 }
 
-.first-section {
-    grid-area: first-section;
+header>h1 {
+    font-size: 3rem;
 }
 
-.sec1-art1 {
-    grid-area: sec1-art1;
-}
-
-.sec1-art2 {
-    grid-area: sec1-art2;
-}
-
-.sect1-art3 {
-    grid-area: sect1-art3;
+header>hr {
+    margin-top: 40px;
+    width: 30px;
 }
 
 .video {
+    background-image: url("img/video.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left;
     grid-area: video;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.video>img {
+    padding-top: 100px;
 }
 
 .testimonials {
+    margin-top: 25px;
+    height: 100%;
+    color: gray;
     grid-area: testimonials;
 }
 
-.sec2-art1 {
-    grid-area: sec2-art1;
+.testimonials>h2 {
+    font-size: 2rem;
 }
 
-.sec2-art2 {
-    grid-area: sec2-art2;
+.second-section {
+    grid-area: second-section;
 }
 
-.sec2-art3 {
-    grid-area: sec2-art3;
+.second-section>ul {
+    display: flex;
+    margin: auto;
+    justify-content: center;
 }
 
-.rec-posts {
+.quotesimg {
+    float: left;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-left: 70px;
+}
+
+.quotes_names {
+    font-weight: bold;
+    color: gray;
+}
+
+.second-section>ul>li {
+    width: 15%;
+}
+
+.recent_posts {
     grid-area: rec-posts;
+    background-color: #f3f3f3;
+    color: gray;
 }
 
 .posts {
     grid-area: posts;
+    background-color: #f3f3f3;
+}
+
+.posts>ul {
+    margin: 0 auto;
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.posts>ul>li {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerblog {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.dateblog {
+    position: absolute;
+    font-size: 20px;
+    width: 50px;
+    height: 60px;
+    top: 0px;
+    left: 24px;
+    background-color: rgba(128, 128, 128, 0.753);
+    display: block;
 }
 
 footer {
     grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(190, 184, 184);
+}
+
+footer>ul {
+    display: flex;
+}
+
+footer>ul>li {
+    padding-left: 25px;
+}
+
+footer>p>a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
